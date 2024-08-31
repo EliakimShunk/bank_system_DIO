@@ -1,4 +1,4 @@
-import bank_functions as fc
+import fc.bank_functions as fc
 
 menu = """
 
