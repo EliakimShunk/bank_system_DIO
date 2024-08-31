@@ -1,5 +1,8 @@
 import fc.bank_functions as fc
 
+# Author: Eliakim Shunk
+# Purpose: This is a basic banking system that allows the user to deposit, withdraw and see their bank statement.
+
 menu = """
 
 [D] Deposit
@@ -29,7 +32,7 @@ while True:
         balance = fc.deposit(balance=balance, deposit_value=deposit_value)
 
     elif choice == "W":
-        print("Withdraw")
+        print("\nWithdraw\n")
         if amount_of_withdraws >= MAX_WITHDRAW:
             print("Max withdraw limit reached. Please try again tomorrow.")
             continue
@@ -54,7 +57,7 @@ while True:
         print("=" * 40)
 
     elif choice == "L":
-        print("Thanks and come again!")
+        print("\nThanks and come again!")
         break
 
     else:
