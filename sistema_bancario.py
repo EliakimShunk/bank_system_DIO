@@ -7,11 +7,11 @@ menu = """
 
 ==> """
 
-saldo = 0
-limite = 500
-extrato = ""
-numero_saques = 0
-LIMITE_SAQUES = 3
+balance = 0
+withdrawal_limit = 500
+statement = ""
+amount_of_withdrawals = 0
+MAX_WITHDRAWAL = 3
 
 while True:
 
