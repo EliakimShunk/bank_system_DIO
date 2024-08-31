@@ -48,8 +48,10 @@ while True:
         balance = fc.withdraw(balance=balance, withdraw_value=withdraw_value)
     
     elif choice == "S":
-        print("Statement")
-        print(f"{statement}\nCurrent balance: R$ {balance:.2f}")
+        print("\n" + " Statement ".center(40, "="))
+        print(f"{statement}" if statement else "No transactions registered.")
+        print(f"\nCurrent balance: R$ {balance:.2f}")
+        print("=" * 40)
 
     elif choice == "L":
         print("Thanks and come again!")
