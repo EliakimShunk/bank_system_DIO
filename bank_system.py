@@ -23,7 +23,7 @@ while True:
         print("\nDeposit\n")
         deposit_value = float(input("Type how much you want to deposit\n\n==> "))
         if deposit_value <= 0:
-            print("Invalid input. You can't deposit a negative amount of money.")
+            print("Invalid input. You can't deposit negative or no amount of money.")
             continue
         statement = "\n".join((statement, f"Deposit\nR$ {balance:.2f} + R$ {deposit_value:.2f} = R$ {balance + deposit_value:.2f}"))
         balance = fc.deposit(balance=balance, deposit_value=deposit_value)
@@ -34,8 +34,8 @@ while True:
             print("Max withdraw limit reached. Please try again tomorrow.")
             continue
         withdraw_value = float(input("Type how much you wish to withdraw\n\n==> "))
-        if withdraw_value < 0:
-            print("You can't withdraw a negative amount of money. Please try again.")
+        if withdraw_value <= 0:
+            print("You can't withdraw negative or no amount of money. Please try again.")
             continue
         elif withdraw_value > withdraw_limit:
             print(f"You can't withdraw more than {withdraw_limit:.2f}. Please try again.")
